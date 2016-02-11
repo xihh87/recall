@@ -8,6 +8,8 @@ Command commands[] = {
 	/* command                     description        additional keywords */
 	{ "amixer -Mq set Master 1%-", "decrease volume", "down lower sound" },
 	{ "amixer -Mq set Master 1%+", "increase volume", "raise sound up" },
+	{ "openssl req \\\n -new \\\n -nodes \\\n -out [certname.csr] \\\n -key [path/to/key] \\\n -subj \"/C=MX/ST=09/L=Ciudad de Mexico/O=Instituto Nacional de Medicina Genomica/OU=Unidad de Servicios Bioinformaticos/CN=INMEGEN\"",
+		 "Generate new certificate signing request", "csr" },
 	{ "curl -LO [url]", "download a file" },
 	{ "date -I", "print date in ISO 8601 format" },
 	{ "date -Is", "print date and time in ISO 8601 format" },
@@ -20,7 +22,8 @@ Command commands[] = {
 	{ "fc-list", "list fonts known by fontconfig" },
 	{ "fc-match [font]", "show font that would be used by fontconfig",
 		"resolve substitute" },
-	{ "free [device] -h", "show free space on device", "disk drive" },
+	{ "git push :[branch]", "delete remote branch on remote repo" },
+	{ "git branch --remote --delete [branch]", "delete remote branch on local repo" },
 	{ "git branch -vv", "list local branches and remote repositories" },
 	{ "git push -u [remote] [branch]",
 		"push local branch to remote repository", "create new" },
@@ -29,12 +32,6 @@ Command commands[] = {
 		"ethernet wifi wireless" },
 	{ "iw dev [device] link", "show status of wireless network adapter",
 		"wifi" },
-	{ "makepkg -si", "build and install package using PKGBUILD" },
-	{ "makepkg -fi", "rebuild and reinstall package using PKGBUILD" },
-	{ "pacman -Qdt", "list orphaned packages" },
-	{ "pacman -Qe", "list explicitly installed packages" },
-	{ "pacman -Ql [package]", "list files owned by package" },
-	{ "pacman -Qo [file]", "list packages that own file", "owned" }
 };
 
 #define NUM_COMMANDS (sizeof(commands) / sizeof(Command))
