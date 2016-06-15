@@ -32,6 +32,7 @@ Command commands[] = {
 		"ethernet wifi wireless" },
 	{ "iw dev [device] link", "show status of wireless network adapter",
 		"wifi" },
+	{ "sudo su -c 'echo 1 > /proc/sys/vm/drop_caches'", "clear cache" },
 };
 
 #define NUM_COMMANDS (sizeof(commands) / sizeof(Command))
