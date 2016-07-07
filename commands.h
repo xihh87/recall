@@ -27,6 +27,8 @@ Command commands[] = {
 	{ "iw dev [device] link", "show status of wireless network adapter", "wifi" },
 	{ "openssl req \\\n -new \\\n -nodes \\\n -out [certname.csr] \\\n -key [path/to/key] \\\n -subj \"/C=MX/ST=09/L=Ciudad de Mexico/O=Instituto Nacional de Medicina Genomica/OU=Unidad de Servicios Bioinformaticos/CN=INMEGEN\"", "Generate new certificate signing request", "csr" },
 	{ "openssl x509 -text -noout -in «cert.pem»", "view the contents of a ssl certificate", "cert openssl tls cert"},
+	{ "sudo chgrp -R [group] [dir]; sudo find [dir] -type d -exec chmod g+s {} ';'", "set default group for new files" },
+	{ "sudo setfacl -R -dm u::rwx,g::rwx,o::r [dir]", "set default permissions for a directory", "acl setfacl" },
 	{ "sudo su -c 'echo 1 > /proc/sys/vm/drop_caches'", "clear cache" },
 	{ "tabbed -r 2 st -w '' -e dvtm", "open tabbed window for st", "tabbed st" },
 };
