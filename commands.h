@@ -24,6 +24,7 @@ Command commands[] = {
 	{ "git push -u [remote] [branch]", "push local branch to remote repository", "create new" },
 	{ "git remote -v", "list remote repositories" },
 	{ "gpg2 --no-default-keyring --list-keys --keyring [file]", "show keys on a gpg keyring"},
+	{ "gpg --with-colons --list-config group \\\n| awk -F':' '/'[group]'/ {n=split($4, members, \";\"); for (i='[group]i++){print members[i]}}' \\\n| sort", "show members of a gpg group", "grupo miembros"},
 	{ "ip link show [device]", "show status of network adapter", "ethernet wifi wireless" },
 	{ "iw dev [device] link", "show status of wireless network adapter", "wifi" },
 	{ "openssl req \\\n -new \\\n -nodes \\\n -out [certname.csr] \\\n -key [path/to/key] \\\n -subj \"/C=MX/ST=09/L=Ciudad de Mexico/O=Instituto Nacional de Medicina Genomica/OU=Unidad de Servicios Bioinformaticos/CN=INMEGEN\"", "Generate new certificate signing request", "csr" },
