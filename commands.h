@@ -8,6 +8,7 @@ Command commands[] = {
 	/* command                     description        additional keywords */
 	{ "amixer -Mq set Master 1%-", "decrease volume", "down lower sound" },
 	{ "amixer -Mq set Master 1%+", "increase volume", "raise sound up" },
+	{ "column -s'\t' -t [archivo]", "show contents as columns", "mostrar columnas"},
 	{ "curl -LO [url]", "download a file" },
 	{ "date -I", "print date in ISO 8601 format" },
 	{ "date -Is", "print date and time in ISO 8601 format" },
@@ -23,7 +24,8 @@ Command commands[] = {
 	{ "git push :[branch]", "delete remote branch on remote repo" },
 	{ "git push -u [remote] [branch]", "push local branch to remote repository", "create new" },
 	{ "git remote -v", "list remote repositories" },
-	{ "gpg2 --no-default-keyring --list-keys --keyring [file]", "show keys on a gpg keyring"},
+	{ "gpg --no-default-keyring --list-keys --keyring [file]", "show keys on a gpg keyring"},
+	{ "gpg --keyserver pgp.mit.edu --recv-keys [keyid]", "syncronize one key from a keyserver", "get public key"},
 	{ "gpg --with-colons --list-config group \\\n| awk -F':' '/'[group]'/ {n=split($4, members, \";\"); for (i='[group]i++){print members[i]}}' \\\n| sort", "show members of a gpg group", "grupo miembros"},
 	{ "ip link show [device]", "show status of network adapter", "ethernet wifi wireless" },
 	{ "iw dev [device] link", "show status of wireless network adapter", "wifi" },
